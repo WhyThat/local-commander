@@ -1,0 +1,44 @@
+{
+  "name": "local-commander",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    { "dir": "common" },
+    { "dir": "bindings" },
+    { "dir": "pages", "subdirs": true },
+    { "dir": "components", "subdirs": true },
+    "layouts"
+    ,{
+    "dir" : "__tests__",
+    "type": "dev",
+    "subdirs" : true
+  }],
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [{
+    "module": "es6",
+    "in-source": true
+  },
+  {
+    "module": "commonjs"
+  }
+],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest"
+  ],
+  "bs-dependencies": [
+    "reason-react",
+    "re-formality",
+    "re-tailwind",
+    "reason-apollo",
+    "reason-apollo-hooks"
+  ],
+  "ppx-flags": [
+    "re-formality/ppx",
+    "decco/ppx",
+    "@baransu/graphql_ppx_re/ppx"
+  ],
+  "refmt": 3
+}
