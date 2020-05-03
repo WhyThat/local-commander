@@ -3,11 +3,17 @@
 let inMemoryCache = ApolloInMemoryCache.createInMemoryCache();
 
 let authHeaders = Js.Dict.empty();
-Js.Dict.set(authHeaders, "x-hasura-admin-secret", Js.Json.string(""));
+if (!Config.is_production) {
+  Js.Dict.set(
+    authHeaders,
+    "x-hasura-admin-secret",
+    Js.Json.string(Config.hasura_admin_key),
+  );
+};
 
 let httpLink =
   ApolloLinks.createHttpLink(
-    ~uri="https://local-commander-stagging.herokuapp.com/v1/graphql",
+    ~uri=Config.api_url,
     ~headers=Js.Json.object_(authHeaders),
     ~fetch,
     (),

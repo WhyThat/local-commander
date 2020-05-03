@@ -1,0 +1,19 @@
+{
+  "schemaPath": "./graphql_schema.json",
+  "projects": {
+    "backend":{
+      "name": "Backend",
+      "schemaPath": "./graphql_schema.json"
+    }
+  },
+  "extensions": {
+    "endpoints": {
+      "staging": {
+        "url": "${env:API_URL}",
+        "headers": {
+          "x-hasura-access-key": "${env:X_HASURA_ACCESS_KEY}"
+        }
+      }
+    }
+  }
+}

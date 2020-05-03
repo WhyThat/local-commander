@@ -7,3 +7,5 @@ npm-debug.log
 *.bs.js
 .next
 .vscode
+.graphql_ppx_cache
+.env.local

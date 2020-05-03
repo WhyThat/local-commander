@@ -6,6 +6,8 @@
   "sources": [
     { "dir": "common" },
     { "dir": "bindings" },
+    { "dir": "config" },
+    { "dir": "core" },
     { "dir": "pages", "subdirs": true },
     { "dir": "components", "subdirs": true },
     "layouts"

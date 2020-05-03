@@ -150,6 +150,8 @@ let make = () => {
         ->ignore;
       },
     );
+  let (users, _) = Queries.useProposalsListQuery();
+  Js.log(users);
   <div className=Style.mainClass>
     <Form className=Style.containerClass onSubmit={form.submit}>
       <div className=Style.cardClass>
