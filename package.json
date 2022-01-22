@@ -21,7 +21,7 @@
     "decco": "^1.2.0",
     "next": "^9.3.5",
     "next-transpile-modules": "^3.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "re-formality": "^4.0.0-beta.7",
     "re-tailwind": "0.0.10",
     "react": "^16.8.1",
